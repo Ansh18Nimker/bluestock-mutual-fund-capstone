@@ -1,0 +1,24 @@
+Data Quality Summary
+
+Datasets Loaded Successfully: 10
+
+Findings:
+
+1. All datasets loaded without errors.
+2. No duplicate rows found in any dataset.
+3. No missing values found except:
+   - 04_monthly_sip_inflows.csv
+   - yoy_growth_pct contains 12 missing values.
+
+4. Data types are consistent across datasets.
+5. NAV history contains 46,000 records.
+6. Investor transaction dataset contains 32,778 records.
+
+AMFI Validation:
+- Total Fund Master Codes: 40
+- Total NAV History Codes: 40
+- Missing Codes: 0
+- Validation Status: PASSED
+
+Conclusion:
+Overall dataset quality is excellent. Only the yoy_growth_pct field contains missing values, which is expected for early periods where year-over-year comparison is unavailable.
