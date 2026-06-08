@@ -130,3 +130,28 @@ perf_df.to_csv(
 
 print("Performance cleaned")
 
+
+
+# Remaining datasets (copy after validation)
+
+files_to_copy = [
+    "01_fund_master.csv",
+    "03_aum_by_fund_house.csv",
+    "04_monthly_sip_inflows.csv",
+    "05_category_inflows.csv",
+    "06_industry_folio_count.csv",
+    "09_portfolio_holdings.csv",
+    "10_benchmark_indices.csv"
+]
+
+for file in files_to_copy:
+    df = pd.read_csv(raw_path / file)
+
+    output_name = file.replace(".csv", "_clean.csv")
+
+    df.to_csv(
+        processed_path / output_name,
+        index=False
+    )
+
+    print(f"{output_name} created")
